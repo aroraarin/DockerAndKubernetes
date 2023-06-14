@@ -1,0 +1,26 @@
+[2023-06-13T07:37:03.903+0000] {taskinstance.py:1087} INFO - Dependencies all met for <TaskInstance: add_entry_dag.add_entry_to_db_task scheduled__2023-06-13T07:36:00+00:00 [queued]>
+[2023-06-13T07:37:03.922+0000] {taskinstance.py:1087} INFO - Dependencies all met for <TaskInstance: add_entry_dag.add_entry_to_db_task scheduled__2023-06-13T07:36:00+00:00 [queued]>
+[2023-06-13T07:37:03.924+0000] {taskinstance.py:1283} INFO - 
+--------------------------------------------------------------------------------
+[2023-06-13T07:37:03.925+0000] {taskinstance.py:1284} INFO - Starting attempt 1 of 1
+[2023-06-13T07:37:03.926+0000] {taskinstance.py:1285} INFO - 
+--------------------------------------------------------------------------------
+[2023-06-13T07:37:03.947+0000] {taskinstance.py:1304} INFO - Executing <Task(PythonOperator): add_entry_to_db_task> on 2023-06-13 07:36:00+00:00
+[2023-06-13T07:37:03.959+0000] {standard_task_runner.py:55} INFO - Started process 3419 to run task
+[2023-06-13T07:37:03.966+0000] {standard_task_runner.py:82} INFO - Running: ['***', 'tasks', 'run', 'add_entry_dag', 'add_entry_to_db_task', 'scheduled__2023-06-13T07:36:00+00:00', '--job-id', '145', '--raw', '--subdir', 'DAGS_FOLDER/AssignmentDag.py', '--cfg-path', '/tmp/tmppdi3zdmf']
+[2023-06-13T07:37:03.971+0000] {standard_task_runner.py:83} INFO - Job 145: Subtask add_entry_to_db_task
+[2023-06-13T07:37:04.118+0000] {task_command.py:389} INFO - Running <TaskInstance: add_entry_dag.add_entry_to_db_task scheduled__2023-06-13T07:36:00+00:00 [running]> on host 1840d8ec0686
+[2023-06-13T07:37:04.296+0000] {taskinstance.py:1513} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=***
+AIRFLOW_CTX_DAG_ID=add_entry_dag
+AIRFLOW_CTX_TASK_ID=add_entry_to_db_task
+AIRFLOW_CTX_EXECUTION_DATE=2023-06-13T07:36:00+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=scheduled__2023-06-13T07:36:00+00:00
+[2023-06-13T07:37:04.314+0000] {base.py:73} INFO - Using connection ID 'postgres_connection' for task execution.
+[2023-06-13T07:37:04.326+0000] {sql.py:364} INFO - Running statement: INSERT INTO assignment_table (execution_time) VALUES ('2023-06-13 07:37:04.298746'), parameters: None
+[2023-06-13T07:37:04.329+0000] {sql.py:373} INFO - Rows affected: 1
+[2023-06-13T07:37:04.332+0000] {python.py:177} INFO - Done. Returned value was: None
+[2023-06-13T07:37:04.352+0000] {taskinstance.py:1327} INFO - Marking task as SUCCESS. dag_id=add_entry_dag, task_id=add_entry_to_db_task, execution_date=20230613T073600, start_date=20230613T073703, end_date=20230613T073704
+[2023-06-13T07:37:04.398+0000] {local_task_job.py:159} INFO - Task exited with return code 0
+[2023-06-13T07:37:04.436+0000] {taskinstance.py:2582} INFO - 0 downstream tasks scheduled from follow-on schedule check
